@@ -1,7 +1,6 @@
 import { gql } from 'apollo-server-express';
 
 const tiposProyecto = gql`
-  
   type Objetivo {
     _id: ID!
     descripcion: String!
@@ -23,6 +22,8 @@ const tiposProyecto = gql`
     fase: Enum_FaseProyecto!
     lider: Usuario!
     objetivos: [Objetivo]
+    avances: [Avance]
+    inscripciones: [Inscripcion]
   }
 
   type Query {
